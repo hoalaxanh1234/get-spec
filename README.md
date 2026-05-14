@@ -2,6 +2,10 @@
 
 Standalone Windows agent. Run `agent.exe` — it gathers full hardware specs, prints to terminal, and opens a polished HTML report in your browser.
 
+<img width="862" height="1270" alt="image" src="https://github.com/user-attachments/assets/2e4ba28d-3d4b-4731-96f4-5d2052d42be5" />
+<img width="1036" height="925" alt="image" src="https://github.com/user-attachments/assets/abfc6ff3-eb4b-41e9-a227-a4f16ba9874e" />
+
+
 ```
 agent.exe
 ↓
