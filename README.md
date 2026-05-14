@@ -1,20 +1,21 @@
 # spec-collector — Full Computer Spec Tool
 
-## Architecture
-
-Standalone agent. No server needed. Run `agent.exe` on any Windows machine, it prints full spec to terminal.
+Standalone Windows agent. Run `agent.exe` — it gathers full hardware specs, prints to terminal, and opens a polished HTML report in your browser.
 
 ```
 agent.exe
 ↓
-Gather:  WMI + gopsutil
+Gather:  WMI + gopsutil + registry + nvidia-smi
          → CPU, RAM, OS, disks, GPU, mobo, BIOS,
-           network, monitors, RAM slots, battery
+           network, monitors, RAM slots, battery, BitLocker
 ↓
-Print:   Beautiful formatted terminal output
-         (Vietnamese labels, section-based layout)
+Print:   Beautiful terminal output (Vietnamese labels, box-drawing layout)
 ↓
-Exit
+Open:    HTML report in default browser with:
+         • Save as image (PNG)
+         • Customizable minimal sticker (select fields + add note)
+         • Floating Facebook button
+         • Author info header
 ```
 
 ## Tech Stack
@@ -22,15 +23,15 @@ Exit
 | Layer | Choice |
 |-------|--------|
 | Language | Go 1.22+ |
-| HW queries | `gopsutil/v3` + `StackExchange/wmi` |
-| Output | Terminal with ASCII formatting |
-| Build | Single .exe, no dependencies, no CGO |
+| HW queries | `gopsutil/v3` + `StackExchange/wmi` + registry |
+| Output | Terminal (UTF-8 box-drawing) + HTML report |
+| Build | Single .exe, no dependencies, no CGO, no WebView2 |
 
 ## Project Structure
 
 ```
 get-spec/
-├── main.go                       # Entry point
+├── main.go                       # Entry point (gather, format, HTML, interactive menu)
 ├── go.mod / go.sum
 ├── Makefile
 ├── README.md
@@ -39,74 +40,60 @@ get-spec/
 │   │   └── spec.go               # Data structures
 │   ├── agent/
 │   │   ├── basic.go              # Gather CPU, RAM, OS, disks, GPU, system info
-│   │   ├── detailed.go           # Gather mobo, BIOS, network, monitors, RAM slots, battery
-│   │   └── formatter.go          # Beautiful terminal output formatting
+│   │   ├── basic_windows.go      # GPU VRAM from registry (Windows)
+│   │   ├── basic_other.go        # GPU VRAM stub (non-Windows)
+│   │   ├── detailed.go           # Gather mobo, BIOS, network, monitors, RAM slots, battery, BitLocker
+│   │   ├── gpu_nvidia.go         # nvidia-smi / rocm-smi CLI parsers (cross-platform)
+│   │   └── formatter.go          # Terminal output formatting (Vietnamese, box-drawing)
 │   └── platform/
 │       ├── wmi.go                # WMI stub (non-Windows)
-│       └── wmi_windows.go        # WMI implementation (Windows)
+│       ├── wmi_windows.go        # WMI + QueryWMINamespace (Windows)
+│       ├── registry.go           # Registry stub (non-Windows)
+│       └── registry_windows.go   # Registry reads (Windows)
 ```
 
 ## Build
 
 ```bash
-# Build for current platform
-make
-
-# Build Windows agent (cross-compile)
+# Build Windows agent (cross-compile from Linux)
 make win64
 
 # Build Linux agent
 make linux
 
-# Run
+# Build both
+make all
+
+# Run (Linux)
 make run
 ```
 
-## Output Format
+## Features
 
-```
-==============================================================
-          THÔNG TIN HỆ THỐNG - DESKTOP-4UE0421
-                Ngày xuất: 14/05/2026 23:21
-==============================================================
+### Terminal Output
+- Vietnamese labels (THÔNG TIN MÁY, BỘ XỬ LÝ, CARD ĐỒ HỌA, ...)
+- Unicode box-drawing separators
+- BitLocker status, battery health, RAM slot info
+- Author/contact info footer
 
-[THÔNG TIN MÁY]
-  Tên máy:      DESKTOP-4UE0421
-  User:         Administrator
-  IP:           192.168.1.37
-  Hãng SX:      ASUS (ASUS)
-  Model:        System Product Name
-  Service Tag:  System Serial Number
-  Hệ điều hành: Windows 11 Pro 23H2 (64-bit) - Build 22631.6199
-  BIOS:         American Megatrends Inc. 4505 (2025-11-28)
-  Web hỗ trợ:   https://www.asus.com/support/searchproduct?searchKey=System%20Product%20Name
+### HTML Report
+- Auto-opens in default browser
+- Dark gradient header + author info bar
+- **Save as image** — captures full report as PNG via html2canvas
+- **Minimal sticker** — compact card for printing & taping on PC case
+  - Checkboxes to select which fields appear
+  - Optional custom note (shown italic)
+  - Downloaded as PNG
+- Floating Facebook button (right side, centered)
+- Support link (manufacturer website)
 
-[BỘ XỬ LÝ - CPU]
-  12th Gen Intel Core i9-12900K
-  16 Nhân / 24 Luồng @ 3.2 GHz
-
-[CARD ĐỒ HỌA - GPU]
-  Intel(R) UHD Graphics 770 (2 GB) [Dr: 32.0.101.7082]
-  NVIDIA GeForce RTX 5080 [Dr: 32.0.15.9621]
-
-[BỘ NHỚ RAM - Tổng: 47.7 GB | 3/4 khe]
-  Slot 1: 16GB DDR5 @ 6000MHz | F5-6400J3239G16G
-  Slot 2: 16GB DDR5 @ 6000MHz | D5U1662320B-K66
-  Slot 3: 16GB DDR5 @ 6000MHz | F5-6400J3239G16G
-  >>> Còn trống: 1 khe
-
-[Ổ LƯU TRỮ - 3 ổ]
-  Disk 0: INTEL SSDPEKNW512G8 - 477 GB
-  Disk 1: INTEL SSDPEKNW010T8 - 954 GB
-  Disk 2: SK hynix PC801 HFS001TEJ9X101N - 954 GB
-
-==============================================================
-[MẠNG & BẢO MẬT]
-  IP LAN/Wi-Fi: 192.168.1.37
-  MAC Address:  00:91:9E:7C:5E:D4
-  BitLocker:    Tắt 🔓
-  Pin (Battery): N/A - Chai: N/A
-```
+### Interactive Menu (Windows)
+After output, choose:
+- `[C]` Copy to clipboard
+- `[S]` Save to text file
+- `[R]` Regenerate HTML report
+- `[E]` Edit in Notepad
+- `[Enter]` Exit
 
 ## Dependencies
 
