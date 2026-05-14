@@ -1,0 +1,21 @@
+# Binaries
+agent
+agent.exe
+*.exe
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+go.work
+go.work.sum
+
+# Temp
+tmp/
