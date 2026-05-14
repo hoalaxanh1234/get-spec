@@ -1,6 +1,6 @@
 # Binaries
-agent
-agent.exe
+/agent
+/agent.exe
 *.exe
 
 # IDE
