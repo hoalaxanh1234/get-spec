@@ -52,9 +52,11 @@ type reportData struct {
 	MAC          string
 	BitLocker    string
 	Battery      string
-	MachineJSON    string
-	MinimalContent template.HTML
-	Html2Canvas    template.JS
+	MachineJSON     string
+	MinimalContent  template.HTML
+	Html2Canvas     template.JS
+	TextOutput      string
+	DefaultFilename string
 }
 
 type minimalData struct {
@@ -263,9 +265,11 @@ func buildHTML(m *models.Machine) string {
 		MAC:            mac,
 		BitLocker:      bitLocker,
 		Battery:        battery,
-		MachineJSON:    machineJSON(m),
-		MinimalContent: template.HTML(buildMinimalHTML(m)),
-		Html2Canvas:    template.JS(h2cBytes),
+		MachineJSON:     machineJSON(m),
+		MinimalContent:  template.HTML(buildMinimalHTML(m)),
+		Html2Canvas:     template.JS(h2cBytes),
+		TextOutput:      FormatSpec(m),
+		DefaultFilename: DefaultFilename(m),
 	}
 
 	var buf strings.Builder

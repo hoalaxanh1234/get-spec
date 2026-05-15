@@ -54,7 +54,7 @@ func interactive(m *models.Machine, output string) {
 				fmt.Println("✗ Clipboard failed")
 			}
 		case "s":
-			if path := saveToFile(m, output); path != "" {
+			if path := saveToFile(m, output, scanner); path != "" {
 				fmt.Printf("✓ Saved to %s\n", path)
 			} else {
 				fmt.Println("✗ Save failed")
@@ -115,17 +115,21 @@ func editInEditor(text string) bool {
 	}
 }
 
-func saveToFile(m *models.Machine, output string) string {
+func saveToFile(m *models.Machine, output string, scanner *bufio.Scanner) string {
+	defName := agent.DefaultFilename(m)
+	fmt.Printf("  Nhập tên file (Enter: %s): ", defName)
+	if !scanner.Scan() {
+		return ""
+	}
+	name := strings.TrimSpace(scanner.Text())
+	if name == "" {
+		name = defName
+	}
 	exe, err := os.Executable()
 	if err != nil {
 		return ""
 	}
 	dir := filepath.Dir(exe)
-	hostname := m.Hostname
-	if hostname == "" {
-		hostname = "unknown"
-	}
-	name := fmt.Sprintf("spec-%s-%s.txt", hostname, time.Now().Format("20060102-150405"))
 	path := filepath.Join(dir, name)
 	if err := os.WriteFile(path, []byte(output), 0644); err != nil {
 		return ""

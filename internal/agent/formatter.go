@@ -225,3 +225,28 @@ func batteryHealth(b *models.BatteryInfo) string {
 	pct := float64(b.Capacity) / float64(b.DesignCapacity) * 100
 	return fmt.Sprintf("%.0f%%", pct)
 }
+
+func DefaultFilename(m *models.Machine) string {
+	manu, model := "", ""
+	if m.System != nil {
+		manu = m.System.Manufacturer
+		model = m.System.Model
+	}
+	if m.Motherboard != nil {
+		if manu == "" || isGeneric(manu) {
+			manu = m.Motherboard.Manufacturer
+		}
+		if model == "" || isGeneric(model) {
+			model = m.Motherboard.Model
+		}
+	}
+	if model == "" || isGeneric(model) {
+		return fmt.Sprintf("pc_spec_%s.txt", time.Now().Format("20060102_150405"))
+	}
+	parts := strings.Fields(manu + " " + model)
+	var slug []string
+	for _, p := range parts {
+		slug = append(slug, strings.ToLower(p))
+	}
+	return strings.Join(slug, "_") + ".txt"
+}

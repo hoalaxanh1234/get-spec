@@ -124,12 +124,20 @@
       color: #fff
     }
 
-    .toolbar button:first-child {
+    .toolbar button:nth-child(1) {
       background: linear-gradient(135deg, #2563eb, #1d4ed8)
     }
 
-    .toolbar button:last-child {
+    .toolbar button:nth-child(2) {
       background: linear-gradient(135deg, #059669, #047857)
+    }
+
+    .toolbar button:nth-child(3) {
+      background: linear-gradient(135deg, #d97706, #b45309)
+    }
+
+    .toolbar button:nth-child(4) {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9)
     }
 
     .toolbar button:hover {
@@ -468,6 +476,8 @@
   <div class="toolbar">
     <button onclick="saveImage()">🖼 Lưu thành hình ảnh</button>
     <button onclick="saveMinimal()">📋 Lưu phiên bản tối giản</button>
+    <button onclick="saveText()">📄 Lưu file text</button>
+    <button onclick="copyText()">📋 Copy to clipboard</button>
   </div>
 
   <div class="footer">
@@ -499,6 +509,8 @@
     <div class="minimal-inner" id="minimal-content">{{.MinimalContent}}</div>
   </div>
 
+  <pre id="spec-text" style="display:none">{{.TextOutput}}</pre>
+
   <a href="https://www.facebook.com/nguyenvanvuong972/" target="_blank" class="fb-btn"
     title="Facebook Vương Nguyễn"><svg viewBox="0 0 24 24" fill="white">
       <path
@@ -507,10 +519,13 @@
 
   <script>{{.Html2Canvas}}</script>
   <script>
+    var DEFAULT_FILENAME = "{{.DefaultFilename}}";
     function saveImage() { html2canvas(document.querySelector(".report-content"), { scale: 2, useCORS: true, backgroundColor: "#ffffff" }).then(function (c) { var a = document.createElement("a"); a.href = c.toDataURL("image/png"); a.download = "{{.Hostname}}-spec.png"; a.click() }) }
     function saveMinimal() { document.getElementById("modal-overlay").style.display = "flex" }
     function closeModal() { document.getElementById("modal-overlay").style.display = "none" }
     function doSaveMinimal() { closeModal(); var src = document.getElementById("minimal-content"); var clone = src.cloneNode(true); clone.id = "";["cpu", "ram", "gpu", "disk", "os"].forEach(function (s) { var show = document.getElementById("chk-" + s).checked; clone.querySelectorAll(".min-sec-" + s).forEach(function (el) { el.style.display = show ? "" : "none" }) }); var note = clone.querySelector(".min-sec-note"); var t = document.getElementById("minimal-note").value.trim(); note.textContent = t; note.style.display = t ? "" : "none"; clone.querySelector(".min-sec-contact").style.display = document.getElementById("chk-contact").checked ? "" : "none"; var out = document.getElementById("minimal-content"); out.innerHTML = ""; out.appendChild(clone); var e = document.getElementById("minimal-report"); e.style.display = "block"; html2canvas(e, { scale: 2, useCORS: true, backgroundColor: "#ffffff" }).then(function (c) { e.style.display = "none"; out.innerHTML = src.innerHTML; var a = document.createElement("a"); a.href = c.toDataURL("image/png"); a.download = "{{.Hostname}}-minimal.png"; a.click() }) }
+    function saveText() { var name = prompt("Nhập tên file:", DEFAULT_FILENAME); if (!name) return; var text = document.getElementById("spec-text").textContent; var blob = new Blob([text], { type: "text/plain;charset=utf-8" }); var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; a.click(); URL.revokeObjectURL(a.href) }
+    function copyText() { var text = document.getElementById("spec-text").textContent; var ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta); alert("✓ Đã copy vào clipboard!") }
   </script>
 </body>
 
