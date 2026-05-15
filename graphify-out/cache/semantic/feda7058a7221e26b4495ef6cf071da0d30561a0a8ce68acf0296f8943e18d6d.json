@@ -1,0 +1,1 @@
+{"nodes": [{"id": "gpu_vram_registry_agent", "label": "GPU VRAM Registry (Agent)", "file_type": "code", "source_file": "internal/agent/basic_windows.go", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null}], "edges": [], "hyperedges": []}

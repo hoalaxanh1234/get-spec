@@ -1,0 +1,15 @@
+/work/get-spec/main.go
+/work/get-spec/internal/models/spec.go
+/work/get-spec/internal/platform/wmi.go
+/work/get-spec/internal/platform/registry.go
+/work/get-spec/internal/platform/wmi_windows.go
+/work/get-spec/internal/platform/registry_windows.go
+/work/get-spec/internal/agent/basic_other.go
+/work/get-spec/internal/agent/formatter.go
+/work/get-spec/internal/agent/basic.go
+/work/get-spec/internal/agent/detailed.go
+/work/get-spec/internal/agent/gpu_nvidia.go
+/work/get-spec/internal/agent/basic_windows.go
+/work/get-spec/CLAUDE.md
+/work/get-spec/README.md
+/work/get-spec/todo.md

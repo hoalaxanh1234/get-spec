@@ -1,0 +1,3254 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "spec_collection_pipeline",
+        "label": "Spec Collection Pipeline",
+        "nodes": [
+          "gather_orchestrator",
+          "basic_collector_helpers",
+          "detailed_collector",
+          "machine_data_models"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9,
+        "source_file": "internal/agent"
+      },
+      {
+        "id": "platform_abstraction_layer",
+        "label": "Platform Abstraction Layer",
+        "nodes": [
+          "wmi_stub",
+          "wmi_windows",
+          "registry_stub",
+          "registry_windows",
+          "platform_abstraction_pattern"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "internal/platform"
+      },
+      {
+        "id": "output_formatters",
+        "label": "Output Formatters",
+        "nodes": [
+          "terminal_formatter",
+          "html_report_generator",
+          "machine_data_models"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "internal/agent"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "main.go",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L1",
+      "id": "main_go",
+      "community": 4,
+      "norm_label": "main.go"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L18",
+      "id": "get_spec_main_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "interactive()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L40",
+      "id": "get_spec_main_interactive",
+      "community": 4,
+      "norm_label": "interactive()"
+    },
+    {
+      "label": "copyToClipboard()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L80",
+      "id": "get_spec_main_copytoclipboard",
+      "community": 4,
+      "norm_label": "copytoclipboard()"
+    },
+    {
+      "label": "editInEditor()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L98",
+      "id": "get_spec_main_editineditor",
+      "community": 4,
+      "norm_label": "editineditor()"
+    },
+    {
+      "label": "saveToFile()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L117",
+      "id": "get_spec_main_savetofile",
+      "community": 4,
+      "norm_label": "savetofile()"
+    },
+    {
+      "label": "generateHTML()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L135",
+      "id": "get_spec_main_generatehtml",
+      "community": 4,
+      "norm_label": "generatehtml()"
+    },
+    {
+      "label": "buildHTML()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L155",
+      "id": "get_spec_main_buildhtml",
+      "community": 4,
+      "norm_label": "buildhtml()"
+    },
+    {
+      "label": "machineJSON()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L302",
+      "id": "get_spec_main_machinejson",
+      "community": 4,
+      "norm_label": "machinejson()"
+    },
+    {
+      "label": "isGeneric()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L349",
+      "id": "get_spec_main_isgeneric",
+      "community": 4,
+      "norm_label": "isgeneric()"
+    },
+    {
+      "label": "addRow()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L359",
+      "id": "get_spec_main_addrow",
+      "community": 4,
+      "norm_label": "addrow()"
+    },
+    {
+      "label": "pause()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L421",
+      "id": "get_spec_main_pause",
+      "community": 4,
+      "norm_label": "pause()"
+    },
+    {
+      "label": "spec.go",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L1",
+      "id": "internal_models_spec_go",
+      "community": 3,
+      "norm_label": "spec.go"
+    },
+    {
+      "label": "Machine",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L5",
+      "id": "models_machine",
+      "community": 3,
+      "norm_label": "machine"
+    },
+    {
+      "label": "OSInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L29",
+      "id": "models_osinfo",
+      "community": 3,
+      "norm_label": "osinfo"
+    },
+    {
+      "label": "CPUInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L40",
+      "id": "models_cpuinfo",
+      "community": 3,
+      "norm_label": "cpuinfo"
+    },
+    {
+      "label": "RAMInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L49",
+      "id": "models_raminfo",
+      "community": 3,
+      "norm_label": "raminfo"
+    },
+    {
+      "label": "DiskInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L55",
+      "id": "models_diskinfo",
+      "community": 3,
+      "norm_label": "diskinfo"
+    },
+    {
+      "label": "GPUInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L62",
+      "id": "models_gpuinfo",
+      "community": 3,
+      "norm_label": "gpuinfo"
+    },
+    {
+      "label": "MotherboardInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L69",
+      "id": "models_motherboardinfo",
+      "community": 3,
+      "norm_label": "motherboardinfo"
+    },
+    {
+      "label": "BIOSInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L75",
+      "id": "models_biosinfo",
+      "community": 3,
+      "norm_label": "biosinfo"
+    },
+    {
+      "label": "NetAdapter",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L81",
+      "id": "models_netadapter",
+      "community": 3,
+      "norm_label": "netadapter"
+    },
+    {
+      "label": "MonitorInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L88",
+      "id": "models_monitorinfo",
+      "community": 3,
+      "norm_label": "monitorinfo"
+    },
+    {
+      "label": "SoftwareInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L95",
+      "id": "models_softwareinfo",
+      "community": 3,
+      "norm_label": "softwareinfo"
+    },
+    {
+      "label": "SensorInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L102",
+      "id": "models_sensorinfo",
+      "community": 3,
+      "norm_label": "sensorinfo"
+    },
+    {
+      "label": "SystemInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L109",
+      "id": "models_systeminfo",
+      "community": 3,
+      "norm_label": "systeminfo"
+    },
+    {
+      "label": "RAMSlot",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L116",
+      "id": "models_ramslot",
+      "community": 3,
+      "norm_label": "ramslot"
+    },
+    {
+      "label": "BatteryInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L124",
+      "id": "models_batteryinfo",
+      "community": 3,
+      "norm_label": "batteryinfo"
+    },
+    {
+      "label": "BitLockerInfo",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L132",
+      "id": "models_bitlockerinfo",
+      "community": 3,
+      "norm_label": "bitlockerinfo"
+    },
+    {
+      "label": "wmi.go",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": "L1",
+      "id": "internal_platform_wmi_go",
+      "community": 8,
+      "norm_label": "wmi.go"
+    },
+    {
+      "label": "IsWindows()",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": "L10",
+      "id": "platform_wmi_iswindows",
+      "community": 8,
+      "norm_label": "iswindows()"
+    },
+    {
+      "label": "QueryWMI()",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": "L14",
+      "id": "platform_wmi_querywmi",
+      "community": 8,
+      "norm_label": "querywmi()"
+    },
+    {
+      "label": "QueryWMINamespace()",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": "L18",
+      "id": "platform_wmi_querywminamespace",
+      "community": 8,
+      "norm_label": "querywminamespace()"
+    },
+    {
+      "label": "registry.go",
+      "file_type": "code",
+      "source_file": "internal/platform/registry.go",
+      "source_location": "L1",
+      "id": "internal_platform_registry_go",
+      "community": 9,
+      "norm_label": "registry.go"
+    },
+    {
+      "label": "ReadRegistryString()",
+      "file_type": "code",
+      "source_file": "internal/platform/registry.go",
+      "source_location": "L9",
+      "id": "platform_registry_readregistrystring",
+      "community": 9,
+      "norm_label": "readregistrystring()"
+    },
+    {
+      "label": "ReadRegistryDWORD()",
+      "file_type": "code",
+      "source_file": "internal/platform/registry.go",
+      "source_location": "L13",
+      "id": "platform_registry_readregistrydword",
+      "community": 9,
+      "norm_label": "readregistrydword()"
+    },
+    {
+      "label": "ReadRegistryQWORD()",
+      "file_type": "code",
+      "source_file": "internal/platform/registry.go",
+      "source_location": "L17",
+      "id": "platform_registry_readregistryqword",
+      "community": 9,
+      "norm_label": "readregistryqword()"
+    },
+    {
+      "label": "wmi_windows.go",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": "L1",
+      "id": "internal_platform_wmi_windows_go",
+      "community": 10,
+      "norm_label": "wmi_windows.go"
+    },
+    {
+      "label": "IsWindows()",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": "L11",
+      "id": "platform_wmi_windows_iswindows",
+      "community": 10,
+      "norm_label": "iswindows()"
+    },
+    {
+      "label": "QueryWMI()",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": "L15",
+      "id": "platform_wmi_windows_querywmi",
+      "community": 10,
+      "norm_label": "querywmi()"
+    },
+    {
+      "label": "QueryWMINamespace()",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": "L19",
+      "id": "platform_wmi_windows_querywminamespace",
+      "community": 10,
+      "norm_label": "querywminamespace()"
+    },
+    {
+      "label": "registry_windows.go",
+      "file_type": "code",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L1",
+      "id": "internal_platform_registry_windows_go",
+      "community": 6,
+      "norm_label": "registry_windows.go"
+    },
+    {
+      "label": "ReadRegistryString()",
+      "file_type": "code",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L12",
+      "id": "platform_registry_windows_readregistrystring",
+      "community": 6,
+      "norm_label": "readregistrystring()"
+    },
+    {
+      "label": "ReadRegistryDWORD()",
+      "file_type": "code",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L25",
+      "id": "platform_registry_windows_readregistrydword",
+      "community": 6,
+      "norm_label": "readregistrydword()"
+    },
+    {
+      "label": "ReadRegistryQWORD()",
+      "file_type": "code",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L38",
+      "id": "platform_registry_windows_readregistryqword",
+      "community": 6,
+      "norm_label": "readregistryqword()"
+    },
+    {
+      "label": "FindGPUVRAM()",
+      "file_type": "code",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L51",
+      "id": "platform_registry_windows_findgpuvram",
+      "community": 6,
+      "norm_label": "findgpuvram()"
+    },
+    {
+      "label": "findGPUNameMapping()",
+      "file_type": "code",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L90",
+      "id": "platform_registry_windows_findgpunamemapping",
+      "community": 6,
+      "norm_label": "findgpunamemapping()"
+    },
+    {
+      "label": "basic_other.go",
+      "file_type": "code",
+      "source_file": "internal/agent/basic_other.go",
+      "source_location": "L1",
+      "id": "internal_agent_basic_other_go",
+      "community": 11,
+      "norm_label": "basic_other.go"
+    },
+    {
+      "label": "getGPUVRAMFromRegistry()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic_other.go",
+      "source_location": "L5",
+      "id": "agent_basic_other_getgpuvramfromregistry",
+      "community": 11,
+      "norm_label": "getgpuvramfromregistry()"
+    },
+    {
+      "label": "formatter.go",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L1",
+      "id": "internal_agent_formatter_go",
+      "community": 5,
+      "norm_label": "formatter.go"
+    },
+    {
+      "label": "FormatSpec()",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L11",
+      "id": "agent_formatter_formatspec",
+      "community": 5,
+      "norm_label": "formatspec()"
+    },
+    {
+      "label": "kvLine()",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L143",
+      "id": "agent_formatter_kvline",
+      "community": 5,
+      "norm_label": "kvline()"
+    },
+    {
+      "label": "isGeneric()",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L153",
+      "id": "agent_formatter_isgeneric",
+      "community": 5,
+      "norm_label": "isgeneric()"
+    },
+    {
+      "label": "pickValue()",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L166",
+      "id": "agent_formatter_pickvalue",
+      "community": 5,
+      "norm_label": "pickvalue()"
+    },
+    {
+      "label": "formatOS()",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L178",
+      "id": "agent_formatter_formatos",
+      "community": 5,
+      "norm_label": "formatos()"
+    },
+    {
+      "label": "formatClock()",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L202",
+      "id": "agent_formatter_formatclock",
+      "community": 5,
+      "norm_label": "formatclock()"
+    },
+    {
+      "label": "formatVRAM()",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L210",
+      "id": "agent_formatter_formatvram",
+      "community": 5,
+      "norm_label": "formatvram()"
+    },
+    {
+      "label": "batteryHealth()",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L221",
+      "id": "agent_formatter_batteryhealth",
+      "community": 5,
+      "norm_label": "batteryhealth()"
+    },
+    {
+      "label": "basic.go",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L1",
+      "id": "internal_agent_basic_go",
+      "community": 1,
+      "norm_label": "basic.go"
+    },
+    {
+      "label": "wmiVideoController",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L22",
+      "id": "agent_wmivideocontroller",
+      "community": 1,
+      "norm_label": "wmivideocontroller"
+    },
+    {
+      "label": "win32ComputerSystem",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L28",
+      "id": "agent_win32computersystem",
+      "community": 1,
+      "norm_label": "win32computersystem"
+    },
+    {
+      "label": "win32ComputerSystemProduct",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L34",
+      "id": "agent_win32computersystemproduct",
+      "community": 1,
+      "norm_label": "win32computersystemproduct"
+    },
+    {
+      "label": "win32OS",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L38",
+      "id": "agent_win32os",
+      "community": 1,
+      "norm_label": "win32os"
+    },
+    {
+      "label": "win32Processor",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L45",
+      "id": "agent_win32processor",
+      "community": 1,
+      "norm_label": "win32processor"
+    },
+    {
+      "label": "win32DiskDrive",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L53",
+      "id": "agent_win32diskdrive",
+      "community": 1,
+      "norm_label": "win32diskdrive"
+    },
+    {
+      "label": "win32LogicalDisk",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L59",
+      "id": "agent_win32logicaldisk",
+      "community": 1,
+      "norm_label": "win32logicaldisk"
+    },
+    {
+      "label": "Gather()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L66",
+      "id": "agent_basic_gather",
+      "community": 1,
+      "norm_label": "gather()"
+    },
+    {
+      "label": "getOSInfo()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L147",
+      "id": "agent_basic_getosinfo",
+      "community": 1,
+      "norm_label": "getosinfo()"
+    },
+    {
+      "label": "getCPUTDP()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L185",
+      "id": "agent_basic_getcputdp",
+      "community": 1,
+      "norm_label": "getcputdp()"
+    },
+    {
+      "label": "getSystemInfo()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L196",
+      "id": "agent_basic_getsysteminfo",
+      "community": 1,
+      "norm_label": "getsysteminfo()"
+    },
+    {
+      "label": "getDisks()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L217",
+      "id": "agent_basic_getdisks",
+      "community": 1,
+      "norm_label": "getdisks()"
+    },
+    {
+      "label": "getDisksWMI()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L243",
+      "id": "agent_basic_getdiskswmi",
+      "community": 1,
+      "norm_label": "getdiskswmi()"
+    },
+    {
+      "label": "getGPUs()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L271",
+      "id": "agent_basic_getgpus",
+      "community": 1,
+      "norm_label": "getgpus()"
+    },
+    {
+      "label": "parseGPUBrand()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L312",
+      "id": "agent_basic_parsegpubrand",
+      "community": 1,
+      "norm_label": "parsegpubrand()"
+    },
+    {
+      "label": "getIPAddress()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L330",
+      "id": "agent_basic_getipaddress",
+      "community": 1,
+      "norm_label": "getipaddress()"
+    },
+    {
+      "label": "getMACAddress()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L354",
+      "id": "agent_basic_getmacaddress",
+      "community": 1,
+      "norm_label": "getmacaddress()"
+    },
+    {
+      "label": "generateMachineID()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L371",
+      "id": "agent_basic_generatemachineid",
+      "community": 1,
+      "norm_label": "generatemachineid()"
+    },
+    {
+      "label": "detailed.go",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L1",
+      "id": "internal_agent_detailed_go",
+      "community": 0,
+      "norm_label": "detailed.go"
+    },
+    {
+      "label": "win32BaseBoard",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L10",
+      "id": "agent_win32baseboard",
+      "community": 0,
+      "norm_label": "win32baseboard"
+    },
+    {
+      "label": "win32BIOS",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L16",
+      "id": "agent_win32bios",
+      "community": 0,
+      "norm_label": "win32bios"
+    },
+    {
+      "label": "win32NetAdapter",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L22",
+      "id": "agent_win32netadapter",
+      "community": 0,
+      "norm_label": "win32netadapter"
+    },
+    {
+      "label": "win32NetAdapterConfig",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L28",
+      "id": "agent_win32netadapterconfig",
+      "community": 0,
+      "norm_label": "win32netadapterconfig"
+    },
+    {
+      "label": "win32DesktopMonitor",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L34",
+      "id": "agent_win32desktopmonitor",
+      "community": 0,
+      "norm_label": "win32desktopmonitor"
+    },
+    {
+      "label": "win32PhysicalMemoryArray",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L42",
+      "id": "agent_win32physicalmemoryarray",
+      "community": 0,
+      "norm_label": "win32physicalmemoryarray"
+    },
+    {
+      "label": "win32PhysicalMemory",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L46",
+      "id": "agent_win32physicalmemory",
+      "community": 0,
+      "norm_label": "win32physicalmemory"
+    },
+    {
+      "label": "win32EncryptableVolume",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L54",
+      "id": "agent_win32encryptablevolume",
+      "community": 0,
+      "norm_label": "win32encryptablevolume"
+    },
+    {
+      "label": "win32Battery",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L59",
+      "id": "agent_win32battery",
+      "community": 0,
+      "norm_label": "win32battery"
+    },
+    {
+      "label": "GatherDetailed()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L66",
+      "id": "agent_detailed_gatherdetailed",
+      "community": 0,
+      "norm_label": "gatherdetailed()"
+    },
+    {
+      "label": "getMotherboard()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L81",
+      "id": "agent_detailed_getmotherboard",
+      "community": 0,
+      "norm_label": "getmotherboard()"
+    },
+    {
+      "label": "getBIOS()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L94",
+      "id": "agent_detailed_getbios",
+      "community": 0,
+      "norm_label": "getbios()"
+    },
+    {
+      "label": "getNetworkAdapters()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L107",
+      "id": "agent_detailed_getnetworkadapters",
+      "community": 0,
+      "norm_label": "getnetworkadapters()"
+    },
+    {
+      "label": "getMonitors()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L137",
+      "id": "agent_detailed_getmonitors",
+      "community": 0,
+      "norm_label": "getmonitors()"
+    },
+    {
+      "label": "getRAMSlotCount()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L159",
+      "id": "agent_detailed_getramslotcount",
+      "community": 1,
+      "norm_label": "getramslotcount()"
+    },
+    {
+      "label": "getRAMSlots()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L174",
+      "id": "agent_detailed_getramslots",
+      "community": 0,
+      "norm_label": "getramslots()"
+    },
+    {
+      "label": "wmiBatteryStatic",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L193",
+      "id": "agent_wmibatterystatic",
+      "community": 0,
+      "norm_label": "wmibatterystatic"
+    },
+    {
+      "label": "getBattery()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L199",
+      "id": "agent_detailed_getbattery",
+      "community": 0,
+      "norm_label": "getbattery()"
+    },
+    {
+      "label": "acpiBatteryStatus()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L223",
+      "id": "agent_detailed_acpibatterystatus",
+      "community": 0,
+      "norm_label": "acpibatterystatus()"
+    },
+    {
+      "label": "getBitLocker()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L252",
+      "id": "agent_detailed_getbitlocker",
+      "community": 1,
+      "norm_label": "getbitlocker()"
+    },
+    {
+      "label": "memoryTypeString()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L277",
+      "id": "agent_detailed_memorytypestring",
+      "community": 0,
+      "norm_label": "memorytypestring()"
+    },
+    {
+      "label": "batteryChemistryString()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L294",
+      "id": "agent_detailed_batterychemistrystring",
+      "community": 0,
+      "norm_label": "batterychemistrystring()"
+    },
+    {
+      "label": "batteryStatusString()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L311",
+      "id": "agent_detailed_batterystatusstring",
+      "community": 0,
+      "norm_label": "batterystatusstring()"
+    },
+    {
+      "label": "formatResolution()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L340",
+      "id": "agent_detailed_formatresolution",
+      "community": 0,
+      "norm_label": "formatresolution()"
+    },
+    {
+      "label": "itoa()",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L344",
+      "id": "agent_detailed_itoa",
+      "community": 0,
+      "norm_label": "itoa()"
+    },
+    {
+      "label": "gpu_nvidia.go",
+      "file_type": "code",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L1",
+      "id": "internal_agent_gpu_nvidia_go",
+      "community": 7,
+      "norm_label": "gpu_nvidia.go"
+    },
+    {
+      "label": "getGPUVRAMFromCLI()",
+      "file_type": "code",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L9",
+      "id": "agent_gpu_nvidia_getgpuvramfromcli",
+      "community": 7,
+      "norm_label": "getgpuvramfromcli()"
+    },
+    {
+      "label": "getGPUVRAMFromNvidiaSMI()",
+      "file_type": "code",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L20",
+      "id": "agent_gpu_nvidia_getgpuvramfromnvidiasmi",
+      "community": 7,
+      "norm_label": "getgpuvramfromnvidiasmi()"
+    },
+    {
+      "label": "getGPUVRAMFromAMD()",
+      "file_type": "code",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L29",
+      "id": "agent_gpu_nvidia_getgpuvramfromamd",
+      "community": 7,
+      "norm_label": "getgpuvramfromamd()"
+    },
+    {
+      "label": "parseCommaCSV()",
+      "file_type": "code",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L38",
+      "id": "agent_gpu_nvidia_parsecommacsv",
+      "community": 7,
+      "norm_label": "parsecommacsv()"
+    },
+    {
+      "label": "parseROCMCSV()",
+      "file_type": "code",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L60",
+      "id": "agent_gpu_nvidia_parserocmcsv",
+      "community": 7,
+      "norm_label": "parserocmcsv()"
+    },
+    {
+      "label": "basic_windows.go",
+      "file_type": "code",
+      "source_file": "internal/agent/basic_windows.go",
+      "source_location": "L1",
+      "id": "internal_agent_basic_windows_go",
+      "community": 12,
+      "norm_label": "basic_windows.go"
+    },
+    {
+      "label": "getGPUVRAMFromRegistry()",
+      "file_type": "code",
+      "source_file": "internal/agent/basic_windows.go",
+      "source_location": "L11",
+      "id": "agent_basic_windows_getgpuvramfromregistry",
+      "community": 12,
+      "norm_label": "getgpuvramfromregistry()"
+    },
+    {
+      "label": "spec-collector README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "spec_collector_readme",
+      "community": 13,
+      "norm_label": "spec-collector readme"
+    },
+    {
+      "label": "CLAUDE.md Instructions",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_instructions",
+      "community": 14,
+      "norm_label": "claude.md instructions"
+    },
+    {
+      "label": "todo.md Future Plans",
+      "file_type": "document",
+      "source_file": "todo.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "todo_planning",
+      "community": 15,
+      "norm_label": "todo.md future plans"
+    },
+    {
+      "label": "Machine Data Models",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "machine_data_models",
+      "community": 2,
+      "norm_label": "machine data models"
+    },
+    {
+      "label": "main.go Entry Point",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "main_entry",
+      "community": 2,
+      "norm_label": "main.go entry point"
+    },
+    {
+      "label": "HTML Report Generator",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "html_report_generator",
+      "community": 2,
+      "norm_label": "html report generator"
+    },
+    {
+      "label": "Interactive Menu",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "interactive_menu",
+      "community": 2,
+      "norm_label": "interactive menu"
+    },
+    {
+      "label": "WMI Non-Windows Stub",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "wmi_stub",
+      "community": 2,
+      "norm_label": "wmi non-windows stub"
+    },
+    {
+      "label": "WMI Windows Implementation",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "wmi_windows",
+      "community": 2,
+      "norm_label": "wmi windows implementation"
+    },
+    {
+      "label": "Registry Non-Windows Stub",
+      "file_type": "code",
+      "source_file": "internal/platform/registry.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "registry_stub",
+      "community": 2,
+      "norm_label": "registry non-windows stub"
+    },
+    {
+      "label": "Registry Windows Implementation",
+      "file_type": "code",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "registry_windows",
+      "community": 2,
+      "norm_label": "registry windows implementation"
+    },
+    {
+      "label": "Gather Orchestrator",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gather_orchestrator",
+      "community": 2,
+      "norm_label": "gather orchestrator"
+    },
+    {
+      "label": "Basic Collector Helpers",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "basic_collector_helpers",
+      "community": 2,
+      "norm_label": "basic collector helpers"
+    },
+    {
+      "label": "Detailed Spec Collector",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "detailed_collector",
+      "community": 2,
+      "norm_label": "detailed spec collector"
+    },
+    {
+      "label": "GPU VRAM CLI Parser",
+      "file_type": "code",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gpu_vram_cli",
+      "community": 2,
+      "norm_label": "gpu vram cli parser"
+    },
+    {
+      "label": "GPU VRAM Registry (Agent)",
+      "file_type": "code",
+      "source_file": "internal/agent/basic_windows.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gpu_vram_registry_agent",
+      "community": 2,
+      "norm_label": "gpu vram registry (agent)"
+    },
+    {
+      "label": "GPU VRAM Registry Stub",
+      "file_type": "code",
+      "source_file": "internal/agent/basic_other.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gpu_vram_stub_agent",
+      "community": 2,
+      "norm_label": "gpu vram registry stub"
+    },
+    {
+      "label": "Terminal Output Formatter",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "terminal_formatter",
+      "community": 2,
+      "norm_label": "terminal output formatter"
+    },
+    {
+      "label": "Platform Abstraction via Build Tags",
+      "file_type": "rationale",
+      "source_file": "internal/platform",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "platform_abstraction_pattern",
+      "community": 2,
+      "norm_label": "platform abstraction via build tags"
+    },
+    {
+      "label": "Two-Phase Gathering Design",
+      "file_type": "rationale",
+      "source_file": "internal/agent",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "two_phase_gathering",
+      "community": 2,
+      "norm_label": "two-phase gathering design"
+    },
+    {
+      "label": "Vietnamese-Language UI",
+      "file_type": "rationale",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "vietnamese_ui",
+      "community": 2,
+      "norm_label": "vietnamese-language ui"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_interactive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_copytoclipboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_editineditor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_savetofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_generatehtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_buildhtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L302",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_machinejson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L349",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_isgeneric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L359",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_addrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L421",
+      "weight": 1.0,
+      "source": "main_go",
+      "target": "get_spec_main_pause",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "get_spec_main_main",
+      "target": "get_spec_main_pause",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "get_spec_main_main",
+      "target": "get_spec_main_generatehtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "get_spec_main_main",
+      "target": "get_spec_main_interactive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main.go",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "get_spec_main_main",
+      "target": "agent_basic_gather"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main.go",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "get_spec_main_main",
+      "target": "agent_formatter_formatspec"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "get_spec_main_interactive",
+      "target": "get_spec_main_copytoclipboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "get_spec_main_interactive",
+      "target": "get_spec_main_savetofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "get_spec_main_interactive",
+      "target": "get_spec_main_generatehtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "get_spec_main_interactive",
+      "target": "get_spec_main_editineditor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "get_spec_main_generatehtml",
+      "target": "get_spec_main_buildhtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "get_spec_main_buildhtml",
+      "target": "get_spec_main_isgeneric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "get_spec_main_buildhtml",
+      "target": "get_spec_main_addrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.go",
+      "source_location": "L271",
+      "weight": 1.0,
+      "source": "get_spec_main_buildhtml",
+      "target": "get_spec_main_machinejson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_machine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_osinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_cpuinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_raminfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_diskinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_gpuinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_motherboardinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_biosinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_netadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_monitorinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_softwareinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_sensorinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_systeminfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_ramslot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_batteryinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/models/spec.go",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "internal_models_spec_go",
+      "target": "models_bitlockerinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "internal_platform_wmi_go",
+      "target": "platform_wmi_iswindows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "internal_platform_wmi_go",
+      "target": "platform_wmi_querywmi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "internal_platform_wmi_go",
+      "target": "platform_wmi_querywminamespace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry.go",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "internal_platform_registry_go",
+      "target": "platform_registry_readregistrystring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry.go",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "internal_platform_registry_go",
+      "target": "platform_registry_readregistrydword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry.go",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "internal_platform_registry_go",
+      "target": "platform_registry_readregistryqword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "internal_platform_wmi_windows_go",
+      "target": "platform_wmi_windows_iswindows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "internal_platform_wmi_windows_go",
+      "target": "platform_wmi_windows_querywmi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "internal_platform_wmi_windows_go",
+      "target": "platform_wmi_windows_querywminamespace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "internal_platform_registry_windows_go",
+      "target": "platform_registry_windows_readregistrystring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "internal_platform_registry_windows_go",
+      "target": "platform_registry_windows_readregistrydword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "internal_platform_registry_windows_go",
+      "target": "platform_registry_windows_readregistryqword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "internal_platform_registry_windows_go",
+      "target": "platform_registry_windows_findgpuvram",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "internal_platform_registry_windows_go",
+      "target": "platform_registry_windows_findgpunamemapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "platform_registry_windows_findgpunamemapping",
+      "target": "platform_registry_windows_readregistrydword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "platform_registry_windows_findgpunamemapping",
+      "target": "platform_registry_windows_readregistryqword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic_other.go",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "internal_agent_basic_other_go",
+      "target": "agent_basic_other_getgpuvramfromregistry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "internal_agent_formatter_go",
+      "target": "agent_formatter_formatspec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "internal_agent_formatter_go",
+      "target": "agent_formatter_kvline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "internal_agent_formatter_go",
+      "target": "agent_formatter_isgeneric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "internal_agent_formatter_go",
+      "target": "agent_formatter_pickvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "internal_agent_formatter_go",
+      "target": "agent_formatter_formatos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "internal_agent_formatter_go",
+      "target": "agent_formatter_formatclock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "internal_agent_formatter_go",
+      "target": "agent_formatter_formatvram",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "internal_agent_formatter_go",
+      "target": "agent_formatter_batteryhealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "agent_formatter_formatspec",
+      "target": "agent_formatter_pickvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "agent_formatter_formatspec",
+      "target": "agent_formatter_isgeneric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "agent_formatter_formatspec",
+      "target": "agent_formatter_kvline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "agent_formatter_formatspec",
+      "target": "agent_formatter_formatos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "agent_formatter_formatspec",
+      "target": "agent_formatter_formatclock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "agent_formatter_formatspec",
+      "target": "agent_formatter_formatvram",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "agent_formatter_formatspec",
+      "target": "agent_formatter_batteryhealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "agent_formatter_pickvalue",
+      "target": "agent_formatter_isgeneric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_wmivideocontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_win32computersystem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_win32computersystemproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_win32os",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_win32processor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_win32diskdrive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_win32logicaldisk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_gather",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_getosinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_getcputdp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_getsysteminfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_getdisks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_getdiskswmi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L271",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_getgpus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L312",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_parsegpubrand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L330",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_getipaddress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L354",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_getmacaddress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L371",
+      "weight": 1.0,
+      "source": "internal_agent_basic_go",
+      "target": "agent_basic_generatemachineid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_basic_getipaddress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_basic_getmacaddress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_basic_getdisks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_basic_getgpus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_basic_getsysteminfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_basic_getcputdp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_basic_generatemachineid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_basic_getosinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_detailed_gatherdetailed"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_detailed_getramslotcount"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "agent_basic_gather",
+      "target": "agent_detailed_getbitlocker"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L238",
+      "weight": 1.0,
+      "source": "agent_basic_getdisks",
+      "target": "agent_basic_getdiskswmi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L291",
+      "weight": 1.0,
+      "source": "agent_basic_getgpus",
+      "target": "agent_basic_parsegpubrand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "internal/agent/basic.go",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "agent_basic_getgpus",
+      "target": "agent_gpu_nvidia_getgpuvramfromcli"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32baseboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32bios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32netadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32netadapterconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32desktopmonitor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32physicalmemoryarray",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32physicalmemory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32encryptablevolume",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_win32battery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_gatherdetailed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_getmotherboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_getbios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_getnetworkadapters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_getmonitors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_getramslotcount",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_getramslots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_wmibatterystatic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_getbattery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_acpibatterystatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_getbitlocker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L277",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_memorytypestring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L294",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_batterychemistrystring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L311",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_batterystatusstring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L340",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_formatresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L344",
+      "weight": 1.0,
+      "source": "internal_agent_detailed_go",
+      "target": "agent_detailed_itoa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "agent_detailed_gatherdetailed",
+      "target": "agent_detailed_getmotherboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "agent_detailed_gatherdetailed",
+      "target": "agent_detailed_getbios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "agent_detailed_gatherdetailed",
+      "target": "agent_detailed_getnetworkadapters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "agent_detailed_gatherdetailed",
+      "target": "agent_detailed_getmonitors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "agent_detailed_gatherdetailed",
+      "target": "agent_detailed_getramslots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "agent_detailed_gatherdetailed",
+      "target": "agent_detailed_getbattery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "agent_detailed_getmonitors",
+      "target": "agent_detailed_formatresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "agent_detailed_getramslots",
+      "target": "agent_detailed_memorytypestring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "agent_detailed_getbattery",
+      "target": "agent_detailed_batterychemistrystring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "agent_detailed_getbattery",
+      "target": "agent_detailed_batterystatusstring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "agent_detailed_getbattery",
+      "target": "agent_detailed_acpibatterystatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": "L341",
+      "weight": 1.0,
+      "source": "agent_detailed_formatresolution",
+      "target": "agent_detailed_itoa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "internal_agent_gpu_nvidia_go",
+      "target": "agent_gpu_nvidia_getgpuvramfromcli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "internal_agent_gpu_nvidia_go",
+      "target": "agent_gpu_nvidia_getgpuvramfromnvidiasmi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "internal_agent_gpu_nvidia_go",
+      "target": "agent_gpu_nvidia_getgpuvramfromamd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "internal_agent_gpu_nvidia_go",
+      "target": "agent_gpu_nvidia_parsecommacsv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "internal_agent_gpu_nvidia_go",
+      "target": "agent_gpu_nvidia_parserocmcsv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "agent_gpu_nvidia_getgpuvramfromcli",
+      "target": "agent_gpu_nvidia_getgpuvramfromnvidiasmi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "agent_gpu_nvidia_getgpuvramfromcli",
+      "target": "agent_gpu_nvidia_getgpuvramfromamd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "agent_gpu_nvidia_getgpuvramfromnvidiasmi",
+      "target": "agent_gpu_nvidia_parsecommacsv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "agent_gpu_nvidia_getgpuvramfromamd",
+      "target": "agent_gpu_nvidia_parserocmcsv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/agent/basic_windows.go",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "internal_agent_basic_windows_go",
+      "target": "agent_basic_windows_getgpuvramfromregistry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 66,
+      "weight": 1.0,
+      "source": "basic_collector_helpers",
+      "target": "machine_data_models"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/detailed.go",
+      "source_location": 66,
+      "weight": 1.0,
+      "source": "detailed_collector",
+      "target": "machine_data_models"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/formatter.go",
+      "source_location": 11,
+      "weight": 1.0,
+      "source": "terminal_formatter",
+      "target": "machine_data_models"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 302,
+      "weight": 1.0,
+      "source": "html_report_generator",
+      "target": "machine_data_models"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 19,
+      "weight": 1.0,
+      "source": "main_entry",
+      "target": "gather_orchestrator"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 26,
+      "weight": 1.0,
+      "source": "main_entry",
+      "target": "terminal_formatter"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 30,
+      "weight": 1.0,
+      "source": "main_entry",
+      "target": "html_report_generator"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 34,
+      "weight": 1.0,
+      "source": "main_entry",
+      "target": "interactive_menu"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "main.go",
+      "source_location": 155,
+      "weight": 0.85,
+      "source": "vietnamese_ui",
+      "target": "html_report_generator"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "internal/agent/formatter.go",
+      "source_location": 1,
+      "weight": 0.8,
+      "source": "terminal_formatter",
+      "target": "html_report_generator"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": 1,
+      "weight": 0.9,
+      "source": "wmi_windows",
+      "target": "wmi_stub"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/wmi.go",
+      "source_location": 1,
+      "weight": 0.9,
+      "source": "platform_abstraction_pattern",
+      "target": "wmi_stub"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 155,
+      "weight": 1.0,
+      "source": "basic_collector_helpers",
+      "target": "wmi_windows"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/detailed.go",
+      "source_location": 67,
+      "weight": 1.0,
+      "source": "detailed_collector",
+      "target": "wmi_windows"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": 1,
+      "weight": 0.9,
+      "source": "platform_abstraction_pattern",
+      "target": "wmi_windows"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "internal/platform",
+      "source_location": null,
+      "weight": 0.7,
+      "source": "wmi_windows",
+      "target": "registry_windows"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": 1,
+      "weight": 0.9,
+      "source": "registry_windows",
+      "target": "registry_stub"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/registry.go",
+      "source_location": 1,
+      "weight": 0.9,
+      "source": "platform_abstraction_pattern",
+      "target": "registry_stub"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 172,
+      "weight": 1.0,
+      "source": "basic_collector_helpers",
+      "target": "registry_windows"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": 1,
+      "weight": 0.9,
+      "source": "platform_abstraction_pattern",
+      "target": "registry_windows"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.25,
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": 51,
+      "weight": 0.25,
+      "source": "registry_windows",
+      "target": "gpu_vram_registry_agent"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 66,
+      "weight": 1.0,
+      "source": "gather_orchestrator",
+      "target": "basic_collector_helpers"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 132,
+      "weight": 1.0,
+      "source": "gather_orchestrator",
+      "target": "detailed_collector"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 66,
+      "weight": 0.9,
+      "source": "two_phase_gathering",
+      "target": "gather_orchestrator"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 281,
+      "weight": 1.0,
+      "source": "basic_collector_helpers",
+      "target": "gpu_vram_cli"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 282,
+      "weight": 1.0,
+      "source": "basic_collector_helpers",
+      "target": "gpu_vram_registry_agent"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "internal/agent/basic_other.go",
+      "source_location": 5,
+      "weight": 0.85,
+      "source": "basic_collector_helpers",
+      "target": "gpu_vram_stub_agent"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 66,
+      "weight": 0.9,
+      "source": "two_phase_gathering",
+      "target": "basic_collector_helpers"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent/detailed.go",
+      "source_location": 66,
+      "weight": 0.9,
+      "source": "two_phase_gathering",
+      "target": "detailed_collector"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "internal/agent",
+      "source_location": null,
+      "weight": 0.8,
+      "source": "gpu_vram_cli",
+      "target": "gpu_vram_registry_agent"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent/formatter.go",
+      "source_location": 1,
+      "weight": 0.9,
+      "source": "vietnamese_ui",
+      "target": "terminal_formatter"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "spec_collection_pipeline",
+      "label": "Spec Collection Pipeline",
+      "nodes": [
+        "gather_orchestrator",
+        "basic_collector_helpers",
+        "detailed_collector",
+        "machine_data_models"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent"
+    },
+    {
+      "id": "platform_abstraction_layer",
+      "label": "Platform Abstraction Layer",
+      "nodes": [
+        "wmi_stub",
+        "wmi_windows",
+        "registry_stub",
+        "registry_windows",
+        "platform_abstraction_pattern"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "internal/platform"
+    },
+    {
+      "id": "output_formatters",
+      "label": "Output Formatters",
+      "nodes": [
+        "terminal_formatter",
+        "html_report_generator",
+        "machine_data_models"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "internal/agent"
+    }
+  ],
+  "built_at_commit": "620b1ef93e85fcb75bd60522cf5efa26627975dc"
+}

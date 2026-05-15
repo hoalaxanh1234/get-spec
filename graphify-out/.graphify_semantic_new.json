@@ -1,0 +1,593 @@
+{
+  "nodes": [
+    {
+      "id": "spec_collector_readme",
+      "label": "spec-collector README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "claude_instructions",
+      "label": "CLAUDE.md Instructions",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "todo_planning",
+      "label": "todo.md Future Plans",
+      "file_type": "document",
+      "source_file": "todo.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "machine_data_models",
+      "label": "Machine Data Models",
+      "file_type": "code",
+      "source_file": "internal/models/spec.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "main_entry",
+      "label": "main.go Entry Point",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "html_report_generator",
+      "label": "HTML Report Generator",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "interactive_menu",
+      "label": "Interactive Menu",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "wmi_stub",
+      "label": "WMI Non-Windows Stub",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "wmi_windows",
+      "label": "WMI Windows Implementation",
+      "file_type": "code",
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "registry_stub",
+      "label": "Registry Non-Windows Stub",
+      "file_type": "code",
+      "source_file": "internal/platform/registry.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "registry_windows",
+      "label": "Registry Windows Implementation",
+      "file_type": "code",
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "gather_orchestrator",
+      "label": "Gather Orchestrator",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "basic_collector_helpers",
+      "label": "Basic Collector Helpers",
+      "file_type": "code",
+      "source_file": "internal/agent/basic.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "detailed_collector",
+      "label": "Detailed Spec Collector",
+      "file_type": "code",
+      "source_file": "internal/agent/detailed.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "gpu_vram_cli",
+      "label": "GPU VRAM CLI Parser",
+      "file_type": "code",
+      "source_file": "internal/agent/gpu_nvidia.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "gpu_vram_registry_agent",
+      "label": "GPU VRAM Registry (Agent)",
+      "file_type": "code",
+      "source_file": "internal/agent/basic_windows.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "gpu_vram_stub_agent",
+      "label": "GPU VRAM Registry Stub",
+      "file_type": "code",
+      "source_file": "internal/agent/basic_other.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "terminal_formatter",
+      "label": "Terminal Output Formatter",
+      "file_type": "code",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_abstraction_pattern",
+      "label": "Platform Abstraction via Build Tags",
+      "file_type": "rationale",
+      "source_file": "internal/platform",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "two_phase_gathering",
+      "label": "Two-Phase Gathering Design",
+      "file_type": "rationale",
+      "source_file": "internal/agent",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vietnamese_ui",
+      "label": "Vietnamese-Language UI",
+      "file_type": "rationale",
+      "source_file": "internal/agent/formatter.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "main_entry",
+      "target": "gather_orchestrator",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 19,
+      "weight": 1.0
+    },
+    {
+      "source": "main_entry",
+      "target": "terminal_formatter",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 26,
+      "weight": 1.0
+    },
+    {
+      "source": "main_entry",
+      "target": "html_report_generator",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 30,
+      "weight": 1.0
+    },
+    {
+      "source": "main_entry",
+      "target": "interactive_menu",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 34,
+      "weight": 1.0
+    },
+    {
+      "source": "gather_orchestrator",
+      "target": "basic_collector_helpers",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 66,
+      "weight": 1.0
+    },
+    {
+      "source": "gather_orchestrator",
+      "target": "detailed_collector",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 132,
+      "weight": 1.0
+    },
+    {
+      "source": "basic_collector_helpers",
+      "target": "wmi_windows",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 155,
+      "weight": 1.0
+    },
+    {
+      "source": "basic_collector_helpers",
+      "target": "registry_windows",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 172,
+      "weight": 1.0
+    },
+    {
+      "source": "basic_collector_helpers",
+      "target": "gpu_vram_cli",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 281,
+      "weight": 1.0
+    },
+    {
+      "source": "basic_collector_helpers",
+      "target": "gpu_vram_registry_agent",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 282,
+      "weight": 1.0
+    },
+    {
+      "source": "basic_collector_helpers",
+      "target": "gpu_vram_stub_agent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "internal/agent/basic_other.go",
+      "source_location": 5,
+      "weight": 0.85
+    },
+    {
+      "source": "basic_collector_helpers",
+      "target": "machine_data_models",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 66,
+      "weight": 1.0
+    },
+    {
+      "source": "detailed_collector",
+      "target": "wmi_windows",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/detailed.go",
+      "source_location": 67,
+      "weight": 1.0
+    },
+    {
+      "source": "detailed_collector",
+      "target": "machine_data_models",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/detailed.go",
+      "source_location": 66,
+      "weight": 1.0
+    },
+    {
+      "source": "terminal_formatter",
+      "target": "machine_data_models",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/agent/formatter.go",
+      "source_location": 11,
+      "weight": 1.0
+    },
+    {
+      "source": "html_report_generator",
+      "target": "machine_data_models",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.go",
+      "source_location": 302,
+      "weight": 1.0
+    },
+    {
+      "source": "wmi_windows",
+      "target": "wmi_stub",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": 1,
+      "weight": 0.9
+    },
+    {
+      "source": "registry_windows",
+      "target": "registry_stub",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": 1,
+      "weight": 0.9
+    },
+    {
+      "source": "platform_abstraction_pattern",
+      "target": "wmi_stub",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/wmi.go",
+      "source_location": 1,
+      "weight": 0.9
+    },
+    {
+      "source": "platform_abstraction_pattern",
+      "target": "wmi_windows",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/wmi_windows.go",
+      "source_location": 1,
+      "weight": 0.9
+    },
+    {
+      "source": "platform_abstraction_pattern",
+      "target": "registry_stub",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/registry.go",
+      "source_location": 1,
+      "weight": 0.9
+    },
+    {
+      "source": "platform_abstraction_pattern",
+      "target": "registry_windows",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": 1,
+      "weight": 0.9
+    },
+    {
+      "source": "two_phase_gathering",
+      "target": "gather_orchestrator",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 66,
+      "weight": 0.9
+    },
+    {
+      "source": "two_phase_gathering",
+      "target": "basic_collector_helpers",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent/basic.go",
+      "source_location": 66,
+      "weight": 0.9
+    },
+    {
+      "source": "two_phase_gathering",
+      "target": "detailed_collector",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent/detailed.go",
+      "source_location": 66,
+      "weight": 0.9
+    },
+    {
+      "source": "vietnamese_ui",
+      "target": "terminal_formatter",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent/formatter.go",
+      "source_location": 1,
+      "weight": 0.9
+    },
+    {
+      "source": "vietnamese_ui",
+      "target": "html_report_generator",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "main.go",
+      "source_location": 155,
+      "weight": 0.85
+    },
+    {
+      "source": "terminal_formatter",
+      "target": "html_report_generator",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "internal/agent/formatter.go",
+      "source_location": 1,
+      "weight": 0.8
+    },
+    {
+      "source": "wmi_windows",
+      "target": "registry_windows",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "internal/platform",
+      "source_location": null,
+      "weight": 0.7
+    },
+    {
+      "source": "gpu_vram_cli",
+      "target": "gpu_vram_registry_agent",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "internal/agent",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "registry_windows",
+      "target": "gpu_vram_registry_agent",
+      "relation": "conceptually_related_to",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.25,
+      "source_file": "internal/platform/registry_windows.go",
+      "source_location": 51,
+      "weight": 0.25
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "spec_collection_pipeline",
+      "label": "Spec Collection Pipeline",
+      "nodes": [
+        "gather_orchestrator",
+        "basic_collector_helpers",
+        "detailed_collector",
+        "machine_data_models"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "internal/agent"
+    },
+    {
+      "id": "platform_abstraction_layer",
+      "label": "Platform Abstraction Layer",
+      "nodes": [
+        "wmi_stub",
+        "wmi_windows",
+        "registry_stub",
+        "registry_windows",
+        "platform_abstraction_pattern"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "internal/platform"
+    },
+    {
+      "id": "output_formatters",
+      "label": "Output Formatters",
+      "nodes": [
+        "terminal_formatter",
+        "html_report_generator",
+        "machine_data_models"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "internal/agent"
+    }
+  ],
+  "input_tokens": 15200,
+  "output_tokens": 1800
+}

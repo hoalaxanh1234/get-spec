@@ -1,0 +1,62 @@
+{
+  "/work/get-spec/main.go": {
+    "mtime": 1778813117.9589899,
+    "hash": "c96033d83496893087de14f8176653be"
+  },
+  "/work/get-spec/internal/models/spec.go": {
+    "mtime": 1778777221.864854,
+    "hash": "caa41c832bab77b24c9621212228be9b"
+  },
+  "/work/get-spec/internal/platform/wmi.go": {
+    "mtime": 1778776085.533659,
+    "hash": "e07c0262f78078c35d201618911b682f"
+  },
+  "/work/get-spec/internal/platform/registry.go": {
+    "mtime": 1778777256.449441,
+    "hash": "6f0b745c2afd016d24a4a5944f93f915"
+  },
+  "/work/get-spec/internal/platform/wmi_windows.go": {
+    "mtime": 1778776084.6496444,
+    "hash": "8c45ac135bf2baedbfd313fc48cb2fe8"
+  },
+  "/work/get-spec/internal/platform/registry_windows.go": {
+    "mtime": 1778777266.7416058,
+    "hash": "2299ab1f2a37c52ede362ea7896f6aba"
+  },
+  "/work/get-spec/internal/agent/basic_other.go": {
+    "mtime": 1778777315.0104263,
+    "hash": "2f483743c0947c1666dd70289e4b7fb9"
+  },
+  "/work/get-spec/internal/agent/formatter.go": {
+    "mtime": 1778779671.0176039,
+    "hash": "837501e7ed7c887ddcf3d39560adbfe1"
+  },
+  "/work/get-spec/internal/agent/basic.go": {
+    "mtime": 1778778239.7065732,
+    "hash": "8123d6009274f7cfa72e83a90ca46d57"
+  },
+  "/work/get-spec/internal/agent/detailed.go": {
+    "mtime": 1778776832.1422608,
+    "hash": "0fb758eef703821576d3e0b6ee914d98"
+  },
+  "/work/get-spec/internal/agent/gpu_nvidia.go": {
+    "mtime": 1778778235.8302495,
+    "hash": "c303629860ee71ee286c3eb4fbf44779"
+  },
+  "/work/get-spec/internal/agent/basic_windows.go": {
+    "mtime": 1778777319.9305174,
+    "hash": "d4bc20cd77d1d612bba3d47f5cd8a4c0"
+  },
+  "/work/get-spec/CLAUDE.md": {
+    "mtime": 1778812936.939973,
+    "hash": "e2a8740301e3947a42f30c09a3b87441"
+  },
+  "/work/get-spec/README.md": {
+    "mtime": 1778780868.885375,
+    "hash": "c2729633f085af38f366b044a8bed955"
+  },
+  "/work/get-spec/todo.md": {
+    "mtime": 1778775347.2651677,
+    "hash": "558ab8677399df03ee79bd3fb4dacfc5"
+  }
+}
