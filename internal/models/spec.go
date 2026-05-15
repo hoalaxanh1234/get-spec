@@ -57,6 +57,7 @@ type DiskInfo struct {
 	SizeGB     float64 `json:"size_gb"`
 	Type       string  `json:"type"`
 	MountPoint string  `json:"mount_point"`
+	HealthPct  int     `json:"health_pct"`
 }
 
 type GPUInfo struct {

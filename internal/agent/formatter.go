@@ -109,7 +109,15 @@ func FormatSpec(m *models.Machine) string {
 			if len(parts) > 0 {
 				model = parts[len(parts)-1]
 			}
-			b.WriteString(fmt.Sprintf("    Disk %d: %s - %s\n", i, model, sizeStr))
+			typeStr := ""
+			if d.Type != "" {
+				typeStr = " [" + d.Type + "]"
+			}
+			healthStr := ""
+			if d.HealthPct > 0 {
+				healthStr = fmt.Sprintf(" [Sức khỏe: %d%%]", d.HealthPct)
+			}
+			b.WriteString(fmt.Sprintf("    Disk %d: %s%s - %s%s\n", i, model, typeStr, sizeStr, healthStr))
 		}
 	}
 

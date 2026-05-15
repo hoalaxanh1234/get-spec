@@ -89,7 +89,15 @@ func buildMinimalHTML(m *models.Machine) string {
 
 	var disks []string
 	for _, d := range m.Disks {
-		disks = append(disks, fmt.Sprintf("%s - %.0f GB", d.Model, d.SizeGB))
+		health := ""
+		if d.HealthPct > 0 {
+			health = fmt.Sprintf(" 💚 %d%%", d.HealthPct)
+		}
+		info := fmt.Sprintf("%s - %.0f GB%s", d.Model, d.SizeGB, health)
+		if d.Type != "" {
+			info = fmt.Sprintf("%s [%s] - %.0f GB%s", d.Model, d.Type, d.SizeGB, health)
+		}
+		disks = append(disks, info)
 	}
 
 	var ramSlots []string
@@ -222,9 +230,17 @@ func buildHTML(m *models.Machine) string {
 
 	var disks []diskRow
 	for i, d := range m.Disks {
+		health := ""
+		if d.HealthPct > 0 {
+			health = fmt.Sprintf(" 💚 %d%%", d.HealthPct)
+		}
+		info := fmt.Sprintf("%s - %.0f GB%s", d.Model, d.SizeGB, health)
+		if d.Type != "" {
+			info = fmt.Sprintf("%s [%s] - %.0f GB%s", d.Model, d.Type, d.SizeGB, health)
+		}
 		disks = append(disks, diskRow{
 			Label: fmt.Sprintf("Disk %d", i),
-			Info:  fmt.Sprintf("%s - %.0f GB", d.Model, d.SizeGB),
+			Info:  info,
 		})
 	}
 
@@ -313,7 +329,14 @@ func machineJSON(m *models.Machine) string {
 		d.GPU = append(d.GPU, g.Model+vram)
 	}
 	for _, disk := range m.Disks {
-		d.Disk = append(d.Disk, fmt.Sprintf("%s - %.0f GB", disk.Model, disk.SizeGB))
+		ds := fmt.Sprintf("%s - %.0f GB", disk.Model, disk.SizeGB)
+		if disk.Type != "" {
+			ds = fmt.Sprintf("%s [%s] - %.0f GB", disk.Model, disk.Type, disk.SizeGB)
+		}
+		if disk.HealthPct > 0 {
+			ds += fmt.Sprintf(" 💚 %d%%", disk.HealthPct)
+		}
+		d.Disk = append(d.Disk, ds)
 	}
 	osName := m.OS.Name
 	if m.OS.DisplayName != "" {

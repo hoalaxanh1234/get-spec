@@ -17,6 +17,7 @@ import (
 )
 
 func main() {
+	fmt.Fprint(os.Stderr, "⏳ Đang thu thập thông tin máy tính...\n")
 	m, err := agent.Gather()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error gathering spec: %v\n", err)

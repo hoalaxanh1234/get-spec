@@ -1,6 +1,8 @@
 package agent
 
 import (
+	"fmt"
+	"os"
 	"strings"
 
 	"spec-collector/internal/models"
@@ -69,11 +71,17 @@ func GatherDetailed() (*models.MotherboardInfo, *models.BIOSInfo, []models.NetAd
 	}
 
 	mobo := getMotherboard()
+	fmt.Fprint(os.Stderr, "  ✓ Mainboard\n")
 	bios := getBIOS()
+	fmt.Fprint(os.Stderr, "  ✓ BIOS\n")
 	netAdapters := getNetworkAdapters()
+	fmt.Fprint(os.Stderr, "  ✓ Mạng\n")
 	monitors := getMonitors()
+	fmt.Fprint(os.Stderr, "  ✓ Màn hình\n")
 	ramSlots := getRAMSlots()
+	fmt.Fprint(os.Stderr, "  ✓ Khe RAM\n")
 	battery := getBattery()
+	fmt.Fprint(os.Stderr, "  ✓ Pin\n")
 
 	return mobo, bios, netAdapters, monitors, nil, nil, ramSlots, battery
 }
