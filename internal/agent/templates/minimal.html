@@ -1,0 +1,24 @@
+<div class="minimal-title">🖥 {{if .Model}}{{.Model}}{{end}}</div>
+<table class="minimal-table">
+  <tbody class="min-sec-cpu">
+    <tr><td class="mlabel">Mã sản phẩm:</td><td class="mval"></td></tr>
+  </tbody>
+  <tbody class="min-sec-cpu">
+    <tr><td class="mlabel">CPU</td><td class="mval">{{.CPU}}{{if .CPU2}} - {{.CPU2}}{{end}}</td></tr>
+  </tbody>
+  <tbody class="min-sec-ram">
+    <tr><td class="mlabel">RAM</td><td class="mval">{{.RAM}}</td></tr>
+    {{if .RAM2}}<tr><td class="mlabel">Khe</td><td class="mval">{{.RAM2}}</td></tr>{{end}}
+  </tbody>
+  <tbody class="min-sec-gpu">
+    {{range .GPUs}}<tr><td class="mlabel">GPU</td><td class="mval">{{.}}</td></tr>{{end}}
+  </tbody>
+  <tbody class="min-sec-disk">
+    {{range $i, $d := .Disks}}<tr><td class="mlabel">Disk {{$i}}</td><td class="mval">{{$d}}</td></tr>{{end}}
+  </tbody>
+  <tbody class="min-sec-os">
+    <tr><td class="mlabel">OS</td><td class="mval">{{.OS}}</td></tr>
+  </tbody>
+</table>
+<div class="min-sec-note minimal-note" style="display:none"></div>
+<div class="min-sec-contact minimal-contact">V-Computer • 038.928.6768</div>
